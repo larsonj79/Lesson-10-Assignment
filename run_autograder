@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Set up autograder files
+
+cp /autograder/submission/Lesson_10_Assignment_Hypothesis_Testing_Plus.R /autograder/source/Lesson_10_Assignment_Hypothesis_Testing_Plus.R
+
+cd /autograder/source
+
+
+Rscript grade_one_submission.r 
