@@ -23,12 +23,13 @@ data("mtcars")
 # Ha: *ENTER ANSWER HERE*
 
 #2. Conduct the t test below. Save the t test as mpgtest4v6.
-
+mpgtest4v6 <- t.test(mtcars$mpg[mtcars$cyl == 4], mtcars$mpg[mtcars$cyl == 6])
 
 #3. What do you conclude about fuel efficiency of 4- and 6-cylinder automobiles?
 # *ENTER ANSWER HERE*
 
 #4. Now let's test 6-cylinder versus 8-cylinder cars. Save the test as mpgtest6v8.
+mpgtest6v8 <- t.test(mtcars$mpg[mtcars$cyl == 6], mtcars$mpg[mtcars$cyl == 8])
 
 
 #5. What was the p-value of this test?
@@ -43,6 +44,7 @@ data("mtcars")
 
 #7. Compare the weights of 4-cylinder automobiles to the weights of 6-cylinder 
 # automobiles by doing a t test. Save the test as wttest4v6.
+wttest4v6 <- t.test(mtcars$wt[mtcars$cyl == 4], mtcars$wt[mtcars$cyl == 6])
 
 
 # Engines with 6 cylinders are less fuel efficient, but part of the reason for that 
@@ -51,6 +53,7 @@ data("mtcars")
 #What about speed? Do 6-cylinder cars have a faster quarter-mile time than 4-cylinder cars? 
   
 #8. Do the significance test below. Save the test as qmtest4v6.
+qmtest4v6 <- t.test(mtcars$qsec[mtcars$cyl == 4], mtcars$qsec[mtcars$cyl == 6])
 
 
 #9. What is the p-value of this test?
@@ -71,6 +74,12 @@ data("mtcars")
 # what dimension do these cars differ and on what dimension are they the same? (In other 
 # words, conduct t-tests on the continuous variables in the dataset to see where there 
 # are statistically significant differences.)
+t.test(mtcars$mpg[mtcars$am == 1], mtcars$mpg[mtcars$am == 0])
+t.test(mtcars$disp[mtcars$am == 1], mtcars$disp[mtcars$am == 0])
+t.test(mtcars$hp[mtcars$am == 1], mtcars$hp[mtcars$am == 0])
+t.test(mtcars$drat[mtcars$am == 1], mtcars$drat[mtcars$am == 0])
+t.test(mtcars$wt[mtcars$am == 1], mtcars$wt[mtcars$am == 0])
+t.test(mtcars$qsec[mtcars$am == 1], mtcars$qsec[mtcars$am == 0])
 
 
 
